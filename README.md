@@ -23,6 +23,7 @@
 > * "*"         : 전개연산자
 > * "pass"      : = todo
 > * "raise NotImplementedError"
+> * append(), insert()  : 리스트에 요소 추가
 > * 
 > * 
 > * 
@@ -31,4 +32,21 @@
 > * 
 > * 
 > * 
-> * 
+
+# 참고
+> https://seday.tistory.com/45
+>
+> https://wikidocs.net/85581
+>
+> https://brownbears.tistory.com/198
+>
+> https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%AC%EB%A1%A4%EB%A7%81-%EA%B8%B0%EC%B4%88
+>
+> PyQt => https://wikidocs.net/119616
+>
+>
+>
+>
+>
+>
+
