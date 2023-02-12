@@ -23,7 +23,7 @@ class MyWindow(QMainWindow):
         #self.setWindowIcon(QIcon("D:/200.dev/201.src/20.python/py/macro/icon03.png"))
         # not working
         #self.setWindowIcon(QIcon("icon03.png"))
-        self.setWindowIcon(QIcon('./macro/icon03.png'))
+        self.setWindowIcon(QIcon('./image/icon03.png'))
 
         # ----------------------------------------
         # Button

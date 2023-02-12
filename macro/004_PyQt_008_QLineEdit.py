@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 class MyWin(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon("./macro/icon03.png"))
+        self.setWindowIcon(QIcon("./image/icon03.png"))
         self.setGeometry(300,300,400,400)
 
         self.line_edit = QLineEdit(" ", self)

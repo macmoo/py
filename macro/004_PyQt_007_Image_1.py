@@ -8,7 +8,7 @@ class MyWin(QMainWindow):
         self.setGeometry(300,300,400,400)
 
         label = QLabel()
-        label.setPixmap(QPixmap("./macro/logo.jpg"))
+        label.setPixmap(QPixmap("./image/logo.jpg"))
         self.setCentralWidget(label)
 
 app = QApplication(sys.argv)
