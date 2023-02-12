@@ -19,8 +19,12 @@ class MyWindow(QMainWindow):
         self.setGeometry(300, 300, 400, 400)
         # ----------------------------------------
         # 타이틀바 아이콘
+        # working
+        #self.setWindowIcon(QIcon("D:/200.dev/201.src/20.python/py/macro/icon03.png"))
         # not working
-        self.setWindowIcon(QIcon(".//icon03.png"))
+        #self.setWindowIcon(QIcon("icon03.png"))
+        self.setWindowIcon(QIcon('./macro/icon03.png'))
+
         # ----------------------------------------
         # Button
         btnBuy = QPushButton(text="매수", parent=self)
@@ -40,8 +44,6 @@ class MyWindow(QMainWindow):
     # 방법2
     def btn_clicked(self):
         QApplication.instance().quit()
-
-
 
     def buy(self):
         print("몽땅 매수")
