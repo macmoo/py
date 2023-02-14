@@ -65,7 +65,41 @@
 |                   |self.statusBar.showMessage("PYSTOCK v1.0")|
 |                   |print(self.statusBar.currentMessage())|
 |                   |self.statusBar.clearMessage()|
-|||
+|QCheckBox          |self.cbox = QCheckBox("미수", self)|
+|                   |self.cbox.stateChanged.connect(self.slot)|
+|                   |if state == Qt.Checked:|
+|QSpinBox           |self.spinbox = QSpinBox(self)|
+|                   |self.spinbox.valueChanged.connect(self.spinbox_value_changed)|
+|                   |value = self.spinbox.value()|
+|QTableWidget       |self.tableWidget = QTableWidget(self)|
+|                   |self.tableWidget.resize(290, 290)|
+|                   |self.tableWidget.setColumnCount(2)|
+|                   |self.tableWidget.setRowCount(5)|
+|                   |self.tableWidget.verticalHeader().setVisible(False)|
+|                   |labels = ["종목명", "종목코드"] # 테이블 항목명|
+|                   |self.tableWidget.setHorizontalHeaderLabels(labels)|
+|                   |self.tableWidget.setItem(0,0,QTableWidgetItem("삼성전자"))|
+|QSlider            |self.slider = QSlider(Qt.Horizontal, self)|
+|                   |self.slider.setRange(0, 100)|
+|                   |self.slider.valueChanged.connect(self.slider_value_changed)|
+|                   |value = self.slider.value()|
+|QComboBox          |self.combo = QComboBox(self)
+|                   |self.combo.addItem("보통")
+|                   |self.combo.currentTextChanged.connect(self.slot)
+|                   |print(text)
+|QVBoxLayout        |btn1 = QPushButton("btn1")|
+|                   |layout = QVBoxLayout()|
+|                   |layout.addWidget(btn1)|
+|                   |self.setLayout(layout)|
+|QHBoxLayout        |btn1 = QPushButton("btn1")|
+|                   |layout = QHBoxLayout()|
+|                   |layout.addWidget(btn1)|
+|                   |self.setLayout(layout)|
+|QGridLayout        |btn1 = QPushButton("btn1")|
+|                   |layout = QGridLayout()|
+|                   |layout.addWidget(btn1, 0,0)|
+|                   |self.setLayout(layout)|
+|Layout 여백?       |layout.addStretch(1)|
 |||
 |||
 |||
