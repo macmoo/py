@@ -40,21 +40,19 @@
 > *
 > *
 > *
-
-
 |제목|내용|
 |------|---|
-|타이틀바 아이콘    |self.setWindowIcon(QIcon('./macro/icon03.png'))|
-|윈도우 사이즈      |self.setGeometry(300,300,400,400)|
-|버튼               |btnBuy = QPushButton(text="매수", parent=self)|
+|타이틀바 아이콘        |self.setWindowIcon(QIcon('./macro/icon03.png'))|
+|윈도우 사이즈         |self.setGeometry(300,300,400,400)|
+|버튼                |btnBuy = QPushButton(text="매수", parent=self)|
 |                   |self.btn.clicked.connect(self.btn_clicked)|
-|창닫기             |btnQuit.clicked.connect(QApplication.instance().quit)|
+|창닫기               |btnQuit.clicked.connect(QApplication.instance().quit)|
 |                   |btnQuit.clicked.connect(self.btn_clicked)|
 |                   |btnQuit.clicked.connect(self.close)|
-|라벨               |self.label = QLabel("메시지:", self)|
+|라벨                |self.label = QLabel("메시지:", self)|
 |                   |self.label.clear()|
 |                   |self.label.setText("버튼 클릭")|
-|이미지             |label.setPixmap(QPixmap("./macro/logo.jpg"))|
+|이미지               |label.setPixmap(QPixmap("./macro/logo.jpg"))|
 |                   |self.setCentralWidget(label)|
 |QLineEdit          |self.line_edit = QLineEdit(" ", self)|
 |                   |self.line_edit.setEnabled(False) # 비활성화|
@@ -99,13 +97,35 @@
 |                   |layout = QGridLayout()|
 |                   |layout.addWidget(btn1, 0,0)|
 |                   |self.setLayout(layout)|
-|Layout 여백?       |layout.addStretch(1)|
+|Layout 여백?        |layout.addStretch(1)|
+|QPlainTextEdit     |self.text = QPlainTextEdit(self)
+|                   |self.text.appendPlainText("Hello\n") # 텍스트 출력
+|                   |self.text.setReadOnly(True)|
+|Theme             |app.setStyle("Fusion")|
+|                  |palette = QPalette()|
+|                  |palette.setColor(QPalette.Window,           QColor(53,53,53))|
+|                  |palette.setColor(QPalette.Window,           QColor(53, 53, 53))|
+|                  |palette.setColor(QPalette.WindowText,       Qt.white)|
+|                  |palette.setColor(QPalette.Base,             QColor(25, 25, 25))|
+|                  |palette.setColor(QPalette.AlternateBase,    QColor(53, 53, 53))|
+|                  |palette.setColor(QPalette.ToolTipBase,      Qt.white)|
+|                  |palette.setColor(QPalette.ToolTipText,      Qt.white)|
+|                  |palette.setColor(QPalette.Text,             Qt.white)|
+|                  |palette.setColor(QPalette.Button,           QColor(53, 53, 53))|
+|                  |palette.setColor(QPalette.ButtonText,       Qt.white)|
+|                  |palette.setColor(QPalette.BrightText,       Qt.red)|
+|                  |palette.setColor(QPalette.Link,             QColor(42, 130, 218))|
+|                  |palette.setColor(QPalette.Highlight,        QColor(42, 130, 218))|
+|                  |palette.setColor(QPalette.HighlightedText,  Qt.black)|
+|                  |app.setPalette(palette)
 |||
 |||
 |||
 |||
-
-
+|||
+|||
+|||
+|||
 
 # 참고
 > https://seday.tistory.com/45

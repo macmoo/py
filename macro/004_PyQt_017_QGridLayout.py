@@ -15,7 +15,7 @@ class MyWin(QWidget):
         layout.addWidget(btn2, 0,1)
         layout.addWidget(btn3, 1,0)
         layout.addWidget(btn4, 1,1)
-        
+
         self.setLayout(layout)
 
 app = QApplication(sys.argv)
