@@ -52,7 +52,8 @@
 |라벨                |self.label = QLabel("메시지:", self)|
 |                   |self.label.clear()|
 |                   |self.label.setText("버튼 클릭")|
-|이미지               |label.setPixmap(QPixmap("./macro/logo.jpg"))|
+|setPixmap          |label.setPixmap(QPixmap("./macro/logo.jpg"))|
+|                   |label.setScaledContents(True)|
 |                   |self.setCentralWidget(label)|
 |QLineEdit          |self.line_edit = QLineEdit(" ", self)|
 |                   |self.line_edit.setEnabled(False) # 비활성화|
@@ -118,10 +119,28 @@
 |                  |palette.setColor(QPalette.Highlight,        QColor(42, 130, 218))|
 |                  |palette.setColor(QPalette.HighlightedText,  Qt.black)|
 |                  |app.setPalette(palette)
-|||
-|||
-|||
-|||
+|QTabWidget        |tabs = QTabWidget()
+|                  |tab1 = QWidget()
+|                  |tabs.addTab(tab1, "tab1")
+|                  |label1 = QLabel("Tab1 Widget" , tab1)
+|                  |label1.move(10,10)
+|                  |self.setCentralWidget(tabs)
+|QListWidget       |listWidget = QListWidget()|
+|                  |listWidget.addItems(["Python 3.7", "Python 3.8", "Python 3.9"])|
+|                  |listWidget.currentItemChanged.connect(self.itemChanged)|
+|                  |print(item.text())|
+|Menu Bar          |self.menubar = self.menuBar()|
+|                  |self.menubar.setNativeMenuBar(False)|
+|                  |# file menu action|
+|                  |self.newAction  = QAction("New")|
+|                  |# file menu|
+|                  |fileMenu = self.menubar.addMenu("파일")|
+|                  |fileMenu.addAction(self.newAction)|
+|                  |fileMenu.addSeparator()|
+|Tool Bar          |self.homeAction = QAction(QIcon("./twitter.png"), 'home')|
+|                  |self.toolbar = self.addToolBar('title')|
+|                  |self.toolbar.addAction(self.homeAction)|
+|                  |self.toolbar.addSeparator()|
 |||
 |||
 |||

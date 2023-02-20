@@ -1,3 +1,4 @@
+# https://wikidocs.net/90736
 import sys
 from PyQt5.QtWidgets import *
 
